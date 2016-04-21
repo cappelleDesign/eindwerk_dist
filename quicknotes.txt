@@ -1,0 +1,1 @@
+images -> 'review/<stuff>' || 'avatars/<tiername>/<filename>' .. 
