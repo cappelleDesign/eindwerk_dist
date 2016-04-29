@@ -34,11 +34,11 @@ INSERT INTO `reviews_has_images` (`reviews_review_id`, `images_image_id`, `heade
 -- review user scores
 INSERT INTO `review_user_scores` (`review_id`, `user_id`, `score`) VALUES ('1', '2', '8');
 -- review votes
-INSERT INTO `review_votes` (`users_user_id`, `reviews_review_id`, `vote_flag`) VALUES ('1', '1', '1'), ('2', '1', '2');
+INSERT INTO `review_votes` (`users_user_id`, `reviews_review_id`, `linked_notification_id`, `vote_flag`) VALUES ('1', '1', '1','1'), ('2', '1', '1', '2');
 -- comments
-INSERT INTO `comments` (`comment_id`, `users_writer_id`, `review_id`, `parent_id`, `comment_txt`, `comment_created`) VALUES (NULL, '1', '1', '1', 'Much review, such wow!', '2016-03-01 00:00:00');
-INSERT INTO `comments` (`comment_id`, `users_writer_id`, `review_id`, `parent_id`, `comment_txt`, `comment_created`) VALUES (NULL, '2', '1', '1', 'yeah buddy', '2016-03-01 00:00:12');
+INSERT INTO `comments` (`comment_id`, `users_writer_id`, `parent_id`, `comment_txt`, `comment_created`) VALUES (NULL, '1', '1', 'Much review, such wow!', '2016-03-01 00:00:00');
+INSERT INTO `comments` (`comment_id`, `users_writer_id`, `parent_id`, `comment_txt`, `comment_created`) VALUES (NULL, '2', '1', 'yeah buddy', '2016-03-01 00:00:12');
 -- comment votes
-INSERT INTO `comment_votes` (`comment_id`, `users_upvoter_id`, `vote_flag`) VALUES ('1', '2', '2'), ('2', '1', '2');
+INSERT INTO `comment_votes` (`comment_id`, `users_upvoter_id`, `linked_notification_id`,`vote_flag`) VALUES ('1', '2', '1','2'), ('2', '1', '1', '2');
 -- good bad tags
 INSERT INTO `goods_bads_tags` (`good_bad_tag_id`, `review_id`, `good_bad_tag_txt`, `good_bad_tag_type`) VALUES (NULL, '1', 'very nice game indeed', 'good'), (NULL, '1', 'very nice graphics', 'good'), (NULL, '1', 'i did not see tits', 'bad'), (NULL, '1', 'game1', 'tag'), (NULL, '1', 'nice grapics', 'tag');
